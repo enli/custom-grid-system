@@ -1,0 +1,52 @@
+@import "variables";
+
+@mixin clearfix {
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin create-media-query-for-grid($screen-size-prefix, $grid-column) {
+  .col-#{$screen-size-prefix}-#{$grid-column} {
+    width: $grid-column / $grid-columns * 100%;
+    float: left;
+  }
+}
+
+@mixin respond-to-min-width($screen-width) {
+  @media only all and (min-width: $screen-width) {
+    @content;
+  }
+}
+
+@mixin max-width-media-query($screen-width) {
+  @media only all and (max-width: $screen-width) {
+    @content;
+  }
+}
+
+@mixin respond-to-mobile() {
+  @media only all and (max-width: $col-sm-min) {
+    @content;
+  }
+}
+
+@mixin respond-to-tablet() {
+  @media only all and (min-width: $col-sm-min) and (max-width: $col-md-min - 1) {
+    @content;
+  }
+}
+
+@mixin respond-to-desktop() {
+  @media only all and (min-width: $col-md-min) {
+    @content;
+  }
+}
+
+@mixin respond-to-devices-except-desktop() {
+  @media only all and (max-width: $col-md-min) {
+    @content;
+  }
+}

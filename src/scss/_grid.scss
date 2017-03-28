@@ -1,0 +1,61 @@
+@import "variables";
+@import "mixins";
+
+$grid-breakpoints: (
+    sm: $col-sm-min,
+    md: $col-md-min,
+    lg: $col-lg-min
+);
+
+$grid-sizes: (xs, sm, md, lg);
+
+// --------- container -----------
+.container {
+  @media only screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+
+  margin: 0 auto;
+  padding: $padding-container;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+// --------- Row -----------
+.row {
+  @include clearfix;
+
+  margin: $margin-row;
+}
+
+// --------- Columns -----------
+
+// generate xs grid properties
+@for $i from 1 through $grid-columns {
+  .col-xs-#{$i} {
+    width: $i / $grid-columns * 100%;
+    float: left;
+  }
+}
+
+// set default properties for all columns
+@for $i from 1 through $grid-columns {
+  @each $grid-size in $grid-sizes {
+    .col-#{$grid-size}-#{$i} {
+      position: relative;
+      padding: $col-padding;
+      min-height: 1px;
+    }
+  }
+}
+
+// generate media queries and set default widths
+@each $screen-size-prefix, $grid-min-width in $grid-breakpoints {
+  @media only all and (min-width: #{$grid-min-width}) {
+    @for $i from 1 through $grid-columns {
+      @include create-media-query-for-grid($screen-size-prefix, $i);
+    }
+  }
+}

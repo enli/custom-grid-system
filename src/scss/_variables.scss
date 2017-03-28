@@ -1,0 +1,54 @@
+// colors
+$color-white: #ffffff;
+$color-yellow: #e4f10e;
+$color-green: #00c09d;
+$color-brand-primary: $color-yellow;
+$color-well-background: #efeff6;
+$color-dark-gray: #48485e;
+$color-dark-gray-2: #3b3b4e;
+
+// grid
+$grid-columns: 12;
+$padding-container: 0 15px;
+$padding-container-30h: 0 30px;
+$margin-row: 0 -10px;
+$col-padding: 0 15px;
+
+// media queries
+$col-sm-min: 768px;
+$col-md-min: 992px;
+$col-lg-min: 1200px;
+
+// typography
+$font-size-base: 10px;
+$font-family-base: "Open Sans", sans-serif;
+
+$font-size-body: 1.6rem;
+$font-size-body-mobile: 1.4rem;
+$line-height: 1.42857;
+
+$font-size-h1: 3rem;
+$font-size-h2: 2.4rem;
+$font-size-h3: 2rem;
+$font-size-h3-mobile: 2rem;
+$font-family-headings: "Roboto", Helvetica, Arial, sans-serif;
+
+$font-size-blockquote: 3rem;
+$font-size-blockquote-mobile: 1.8rem;
+$font-size-blockquote-tablet: 2.4rem;
+
+$margin-bottom-heading: 2rem;
+
+$font-size-hero-name: 6rem;
+$font-size-hero-name-mobile: 3rem;
+$font-size-hero-name-tablet: 4.2rem;
+$font-size-hero-position: 2.2rem;
+$font-size-hero-position-mobile: 1.8rem;
+$font-size-hero-position-tablet: 2rem;
+$font-size-hero-details-desktop: 1.8rem;
+$font-family-hero-quote: "Roboto", Helvetica, Arial, sans-serif;
+$font-size-hero-quote: 3rem;
+$font-size-hero-quote-mobile: 1.8rem;
+$font-size-hero-quote-tablet: 2.4rem;
+
+$padding-blockquote: 0 0 0 30px;

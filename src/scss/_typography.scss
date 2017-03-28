@@ -1,0 +1,67 @@
+@import "variables";
+@import "mixins";
+
+html {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+body {
+  font-size: $font-size-body;
+  line-height: $line-height;
+  color: #48485e;
+
+  @include respond-to-mobile {
+    font-size: $font-size-body-mobile;
+  }
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+
+  @include respond-to-mobile {
+    font-size: $font-size-h3-mobile;
+  }
+}
+
+h1, h2, h3 {
+  font-family: $font-family-headings;
+}
+
+p {
+  margin: 18px 0;
+}
+
+blockquote {
+  font-size: $font-size-blockquote;
+  padding: $padding-blockquote;
+  margin: 0;
+  position: relative;
+
+  @include respond-to-mobile {
+    font-size: $font-size-blockquote-mobile;
+  }
+  @include respond-to-tablet {
+    font-size: $font-size-blockquote-tablet;
+  }
+
+  &:before {
+    content: '“';
+    font-weight: bold;
+    font-size: $font-size-blockquote;
+  }
+
+  &:after {
+    content: '”';
+    font-weight: bold;
+    font-size: $font-size-blockquote;
+  }
+}

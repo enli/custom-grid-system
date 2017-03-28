@@ -1,0 +1,26 @@
+@import "variables";
+@import "mixins";
+
+a {
+  color: $color-white;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-brand-primary;
+    text-decoration: underline;
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+.col-xs-text-center {
+  @include respond-to-mobile {
+    text-align: center;
+  }
+}
+
+.collapse {
+  display: none;
+}

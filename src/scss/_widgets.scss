@@ -1,0 +1,231 @@
+@import "variables";
+@import "mixins";
+
+.hero-banner {
+  //background: url('../images/sara-hero.jpg') no-repeat right;
+  background: linear-gradient(to bottom, #232526, #414345);
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  color: $color-white;
+
+  @include respond-to-tablet() {
+    height: 430px;
+  }
+  @include respond-to-mobile {
+    //background: url('../images/sara-hero-mob.jpg') no-repeat right;
+    background-size: cover;
+    height: 330px;
+  }
+  @include respond-to-desktop {
+    height: 665px;
+  }
+
+  .container {
+    padding: 200px 30px;
+
+    @include respond-to-mobile {
+      padding-top: 80px;
+      padding-top: 80px;
+    }
+    @include respond-to-tablet {
+      padding-top: 125px;
+      padding-top: 125px;
+    }
+
+    a {
+      color: $color-brand-primary;
+    }
+  }
+
+  .hero-name {
+    font-size: $font-size-hero-name;
+    font-weight: bold;
+
+    @include respond-to-mobile {
+      font-size: $font-size-hero-name-mobile;
+    }
+    @include respond-to-tablet {
+      font-size: $font-size-hero-name-tablet;
+    }
+  }
+
+  .hero-position {
+    font-size: $font-size-hero-position;
+
+    @include respond-to-mobile {
+      font-size: $font-size-hero-position-mobile;
+    }
+    @include respond-to-tablet {
+      font-size: $font-size-hero-position-tablet;
+    }
+  }
+
+  .hero-details div[class*='col-'] {
+    padding: 4px 0;
+
+    @include respond-to-mobile {
+      padding: 0
+    }
+    @include respond-to-desktop {
+      font-size: $font-size-hero-details-desktop;
+    }
+  }
+}
+
+.hero-quote {
+  font-size: $font-size-hero-quote;
+  font-family: $font-family-hero-quote;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include respond-to-mobile {
+    font-size: $font-size-hero-quote-mobile;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @include respond-to-tablet {
+    font-size: $font-size-hero-quote-tablet;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.hero-quote-container {
+  background-color: #efeff6;
+  padding: 15px 0;
+}
+
+.separator {
+  height: 2px;
+  width: 40px;
+  background-color: $color-brand-primary;
+  margin: 10px 0;
+}
+
+.alumni-story {
+  padding-top: 30px;
+
+  .alumni-img {
+    margin-top: 20px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+
+      @include respond-to-devices-except-desktop {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $color-dark-gray;
+  color: $color-white;
+  padding: 50px 0;
+
+  @include respond-to-mobile {
+    padding: 20px 0;
+  }
+}
+
+.footer-promotion {
+  background-color: $color-green;
+  margin-top: 20px;
+  padding: 25px 0;
+}
+
+.footer-promotion-text {
+  color: $color-white;
+  font-weight: bold;
+  margin: 0;
+
+  @include respond-to-mobile {
+    text-align: center;
+  }
+}
+
+.footer-subscription {
+  input[type="email"] {
+    padding: 10px 16px;
+    font-size: 1.6rem;
+    background-color: $color-dark-gray-2;
+    border: 0;
+    width: 250px;
+  }
+
+  h2, h4 {
+    margin-top: 0;
+  }
+
+  .btn {
+    position: relative;
+    left: -4px;
+
+    @include respond-to-mobile {
+      display: block;
+      top: 10px;
+      margin: auto;
+    }
+  }
+}
+
+.footer-links {
+  @include respond-to-mobile {
+    margin-top: 30px;
+  }
+  @include respond-to-tablet {
+    margin-top: 30px;
+  }
+
+  ul {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    color: $color-white;
+    padding-left: 0;
+    list-style: none;
+  }
+}
+
+.footer-links-title {
+  color: $color-green;
+  font-weight: bold;
+}
+
+.footer-copyright {
+  background-color: $color-dark-gray-2;
+  color: $color-white;
+  font-size: 1.1rem;
+  padding: 15px 0;
+
+  @include respond-to-mobile {
+    text-align: center;
+  }
+
+  .copyright-text {
+    padding-top: 10px;
+  }
+
+  img {
+    height: 32px;
+    width: 32px;
+    margin-left: 8px;
+  }
+
+  .social-icons {
+    float: right;
+
+    @include respond-to-mobile {
+      margin-top: 15px;
+      float: none;
+    }
+  }
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}

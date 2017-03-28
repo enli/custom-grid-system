@@ -1,0 +1,79 @@
+@import "variables";
+@import "mixins";
+
+.navbar {
+  background: transparent;
+  display: block;
+  position: absolute;
+  width: 100%;
+
+  @include respond-to-mobile {
+    background-color: $color-dark-gray;
+    position: initial;
+  }
+
+  .container {
+    padding: $padding-container-30h;
+  }
+
+  .brand-logo {
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    height: 45px;
+    width: auto;
+    padding-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-toggle {
+    background: transparent;
+    display: none;
+    margin-top: 20px;
+    padding-top: 5px;
+
+    @include respond-to-mobile {
+      display: block;
+      float: right;
+      margin-right: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .icon-bar {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: $color-brand-primary;
+      margin-bottom: 3px;
+    }
+  }
+
+  .navbar-menus {
+    float: right;
+    list-style: none;
+
+    @include respond-to-mobile {
+      display: none;
+      float: none;
+
+      &.in {
+        display: block;
+      }
+    }
+
+    li {
+      float: left;
+      font-weight: bold;
+      color: $color-white;
+      margin-right: 20px;
+
+      @include respond-to-mobile {
+        font-size: 1.8rem;
+        float: none;
+        line-height: 2;
+        text-align: right;
+      }
+    }
+  }
+}
